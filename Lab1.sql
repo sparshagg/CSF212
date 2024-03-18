@@ -89,7 +89,6 @@ INSERT INTO takes VALUES (1, 101, 1, '3', 2022, 'A');
 DELETE FROM course WHERE course_id = 101;
 
 TRUNCATE TABLE takes;
-
 SELECT * FROM department;
 
 
