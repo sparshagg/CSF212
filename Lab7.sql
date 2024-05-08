@@ -58,10 +58,10 @@ INSERT INTO R4 (batchno, agentno, holidaycode, airportcode, quantitybooked) VALU
 (3, 76, 'C930', '1', 11),
 (3, 76, 'A430', '11', 15);
 
---creating a view for the problem
+-- Creating a view for the problem --
 CREATE VIEW agent_booking_details AS
 SELECT R3.agentname, R1.holidaycode, R1.cost, R4.quantitybooked, R2.airportname, R4.batchno, (R1.cost * R4.quantitybooked) AS totalcost
-FROM R4
+FROM R4;
 JOIN R1 ON R4.holidaycode = R1.holidaycode
 JOIN R2 ON R4.airportcode = R2.airportcode
 JOIN R3 ON R4.agentno = R3.agentno;
